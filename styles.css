@@ -1,0 +1,80 @@
+body {
+  /* Flexbox -> centre les éléments dans un conteneur, justify-content + align-items -> centre éléments horizontalement et verticalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+.grid {
+  /* CSS Grid -> système de mise en page qui divise conteneur en lignes et colonnes
+grid-template-rows + grid-template-columns = grille structurée */
+  display: grid;
+  grid-template-rows: repeat(
+    8,
+    1fr
+  ); /* répète 8 fois une fraction égale de l'espace dispo */
+  grid-template-columns: repeat(8, 1fr);
+  /* width: 90vw et max-width: 800px -> système responsive */
+  width: 90vw;
+  max-width: 800px;
+  aspect-ratio: 1; /* maintient proportion d'un élément (1 = carré) */
+  background: black;
+  border: 8px solid #dedad3;
+}
+
+.red {
+  /* grid-row et grid-column -> positionnent éléments zones spécifiques */
+  grid-row: 1 / span 6;
+  grid-column: 3 / span 6;
+  background: red;
+  border-bottom: 15px solid black;
+}
+
+.white1 {
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 2;
+  background: white;
+  border-right: 15px solid black;
+  border-bottom: 25px solid black;
+}
+
+.white2 {
+  grid-row: 4 / span 3;
+  grid-column: 1 / span 2;
+  background: white;
+  border-right: 15px solid black;
+  border-top: 8px solid black;
+  border-bottom: 15px solid black;
+}
+
+.blue {
+  grid-row: 7 / span 2;
+  grid-column: 1 / span 2;
+  background: blue;
+  border-right: 15px solid black;
+}
+
+.white3 {
+  grid-row: 7 / span 2; /* occupe les lignes 7 et 8 */
+  grid-column: 3 / span 5; /* occupe les colonnes 3 à 7 */
+  background: white;
+}
+
+.yellow {
+  grid-row: 7 / span 1;
+  grid-column: 8 / span 1;
+  background: yellow;
+  border-left: 15px solid black;
+  border-bottom: 10px solid black;
+}
+
+.white4 {
+  grid-row: 8 / span 1;
+  grid-column: 8 / span 1;
+  background: white;
+  border-left: 15px solid black;
+  border-top: 10px solid black;
+}
