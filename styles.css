@@ -1,12 +1,54 @@
 body {
   /* Flexbox -> centre les éléments dans un conteneur, justify-content + align-items -> centre éléments horizontalement et verticalement */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
   background: #f4f4f4;
 }
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  margin: 20px;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  margin: 20px;
+  text-align: justify;
+  max-width: 1000px;
+}
+
+footer {
+  display: flex; /* Active Flexbox */
+  justify-content: center; /* Centre horizontalement le contenu */
+  align-items: center; /* Aligne verticalement le contenu */
+  flex-wrap: wrap; /* Permet le retour à la ligne sur petits écrans */
+  padding: 20px 10px;
+  text-align: center; /* Centre le texte sur plusieurs lignes */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+footer p {
+  margin: 0;
+  display: flex; /* Flexbox pour le paragraphe */
+  flex-wrap: wrap; /* Permet le retour à la ligne */
+  justify-content: center; /* Centre le contenu même après le retour à la ligne */
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 0 0 5px;
+  white-space: nowrap; /* Empêche les liens de se couper en deux */
+}
+
+/* Tableau */
 
 .grid {
   /* CSS Grid -> système de mise en page qui divise conteneur en lignes et colonnes
@@ -19,7 +61,7 @@ grid-template-rows + grid-template-columns = grille structurée */
   grid-template-columns: repeat(8, 1fr);
   /* width: 90vw et max-width: 800px -> système responsive */
   width: 90vw;
-  max-width: 800px;
+  max-width: 500px;
   aspect-ratio: 1; /* maintient proportion d'un élément (1 = carré) */
   background: black;
   border: 8px solid #dedad3;
@@ -77,4 +119,39 @@ grid-template-rows + grid-template-columns = grille structurée */
   background: white;
   border-left: 15px solid black;
   border-top: 10px solid black;
+}
+
+/* Bouton */
+
+button {
+  width: 12vw;
+  height: 12vw;
+  max-width: 90px;
+  max-height: 90px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.buttons {
+  display: flex;
+}
+.redButton {
+  background-color: red;
+}
+
+.yellowButton {
+  background-color: yellow;
+}
+
+.blueButton {
+  background-color: blue;
+}
+
+.resetButton {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0, 5rem;
+  border: 8px solid #dedad3;
 }

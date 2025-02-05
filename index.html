@@ -4,17 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Composition with Red, Blue and Yellow</title>
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
+    <header>
+      <h1>Composition with Red, Blue and Yellow</h1>
+    </header>
+    <p>
+      "Composition with Red, Blue and Yellow" (1930) est une œuvre emblématique
+      de Piet Mondrian, symbole de sa quête d’harmonie universelle. <br />Par
+      des lignes noires perpendiculaires et des aplats de couleurs primaires
+      (rouge, bleu, jaune), il crée un équilibre dynamique. <br />Chaque
+      élément, méthodiquement agencé, reflète sa vision d’un monde structuré et
+      serein, où la simplicité géométrique devient un langage universel.
+    </p>
     <div class="grid">
-      <div class="red"></div>
-      <div class="white1"></div>
-      <div class="white2"></div>
-      <div class="blue"></div>
-      <div class="white3"></div>
-      <div class="white4"></div>
-      <div class="yellow"></div>
+      <div class="red square"></div>
+      <div class="white1 square"></div>
+      <div class="white2 square"></div>
+      <div class="blue square"></div>
+      <div class="white3 square"></div>
+      <div class="white4 square"></div>
+      <div class="yellow square"></div>
     </div>
+    <p>
+      Appuyez sur les boutons rouge, jaune et bleu pour générer une composition
+      aléatoire et découvrir votre propre interprétation de l'art de Mondrian.
+    </p>
+    <div class="buttons">
+      <button class="redButton"></button>
+      <button class="yellowButton"></button>
+      <button class="blueButton"></button>
+      <button class="resetButton">Nouveau tableau</button>
+    </div>
+    <footer>
+      <p>
+        Inspiré par
+        <a href="https://www.moma.org/artists/4057" target="_blank">
+          Piet Mondrian</a
+        >, développé par
+        <a href="https://www.linkedin.com/in/pauline-riedinger/" target="_blank"
+          >Pauline Riedinger</a
+        >.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
